@@ -100,7 +100,10 @@ describe('LinkedList', () => {
 
             list.append(32);
             list.append(47);
-
+			
+			list.append(55);//added for testing clear()
+			list.append(75)
+			
             list.clear();
 
             expect(list.head()).to.equal(null);
@@ -169,7 +172,8 @@ describe('LinkedList', () => {
             const list = new LinkedList();
 
             function fn() {
-                list.append(4).reverse().deleteAt(0).clear().insertAt(0, 3);
+               // list.append(4);
+				 list.append(4).reverse().deleteAt(0).clear().insertAt(0, 3);
             }
 
             expect(fn).to.not.throw();
